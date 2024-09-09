@@ -1,3 +1,4 @@
+using CRUD_Dapper.DTOs.Produto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CRUD_Dapper.Controllers
@@ -18,7 +19,7 @@ namespace CRUD_Dapper.Controllers
         }
 
         [HttpPost("Adicionar-Produtos")]
-        public void AdicionarProduto(Produto p)
+        public void AdicionarProduto(CreateProdutoDTO p)
         {
             _repository.AdicionarContrib(p);
         }
